@@ -1,0 +1,46 @@
+apiVersion: v1
+resourceType: data-structure
+meta:
+  hidden: false
+  schemaType: event
+  customData: {}
+data:
+  $schema: http://iglucentral.com/schemas/com.snowplowanalytics.self-desc/schema/jsonschema/1-0-0#
+  self:
+    vendor: com.leos-newsroom
+    name: contact_viewed
+    format: jsonschema
+    version: 1-0-0
+  description: Fired when a user clicks "View Profile" on a media contact card in the directory.
+  type: object
+  properties:
+    contact_id:
+      type: string
+      description: Unique identifier for the media contact.
+      maxLength: 100
+    name:
+      type: string
+      description: Full name of the journalist or editor.
+      maxLength: 255
+    outlet:
+      type: string
+      description: Name of the outlet the contact writes for.
+      maxLength: 255
+    outlet_type:
+      type: string
+      description: Type of media outlet (e.g. Newspaper, Online, Wire Service, Newsletter).
+      maxLength: 100
+    beats:
+      type: array
+      description: List of editorial beats covered by this contact.
+      items:
+        type: string
+        description: An editorial beat (e.g. AI, Finance, Healthcare).
+        maxLength: 100
+  required:
+    - contact_id
+    - name
+    - outlet
+    - outlet_type
+    - beats
+  additionalProperties: false

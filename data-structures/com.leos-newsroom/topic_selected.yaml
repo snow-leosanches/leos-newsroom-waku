@@ -1,0 +1,28 @@
+apiVersion: v1
+resourceType: data-structure
+meta:
+  hidden: false
+  schemaType: event
+  customData: {}
+data:
+  $schema: http://iglucentral.com/schemas/com.snowplowanalytics.self-desc/schema/jsonschema/1-0-0#
+  self:
+    vendor: com.leos-newsroom
+    name: topic_selected
+    format: jsonschema
+    version: 1-0-0
+  description: Fired when a user selects a monitored topic tab on the monitoring dashboard.
+  type: object
+  properties:
+    topic_id:
+      type: string
+      description: Unique slug identifier for the monitored topic (e.g. nexgen-cloud).
+      maxLength: 100
+    topic_name:
+      type: string
+      description: Display name of the monitored topic (e.g. NexGen Cloud).
+      maxLength: 255
+  required:
+    - topic_id
+    - topic_name
+  additionalProperties: false

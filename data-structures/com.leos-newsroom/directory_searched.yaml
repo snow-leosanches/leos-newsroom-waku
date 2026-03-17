@@ -1,0 +1,29 @@
+apiVersion: v1
+resourceType: data-structure
+meta:
+  hidden: false
+  schemaType: event
+  customData: {}
+data:
+  $schema: http://iglucentral.com/schemas/com.snowplowanalytics.self-desc/schema/jsonschema/1-0-0#
+  self:
+    vendor: com.leos-newsroom
+    name: directory_searched
+    format: jsonschema
+    version: 1-0-0
+  description: Fired (debounced 600ms) when a user types a search query in the media directory search bar.
+  type: object
+  properties:
+    query:
+      type: string
+      description: The search string entered by the user.
+      maxLength: 512
+    results_count:
+      type: integer
+      description: Number of contacts matching the query at the time the event fired.
+      minimum: 0
+      maximum: 10000
+  required:
+    - query
+    - results_count
+  additionalProperties: false

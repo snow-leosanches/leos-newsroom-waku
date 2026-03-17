@@ -1,0 +1,10 @@
+apiVersion: v1
+resourceType: source-application
+resourceName: 323fb3ec-ee93-4e60-9fd3-a5e913ef5dab
+data:
+    name: Leo's Newsroom Web App
+    appIds:
+        - leos-newsroom
+    entities:
+        tracked: []
+        enriched: []

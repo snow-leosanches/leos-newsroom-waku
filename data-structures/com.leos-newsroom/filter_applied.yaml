@@ -1,0 +1,28 @@
+apiVersion: v1
+resourceType: data-structure
+meta:
+  hidden: false
+  schemaType: event
+  customData: {}
+data:
+  $schema: http://iglucentral.com/schemas/com.snowplowanalytics.self-desc/schema/jsonschema/1-0-0#
+  self:
+    vendor: com.leos-newsroom
+    name: filter_applied
+    format: jsonschema
+    version: 1-0-0
+  description: Fired when a user applies a category filter on the press release feed.
+  type: object
+  properties:
+    filter_type:
+      type: string
+      description: The dimension being filtered on (e.g. category).
+      maxLength: 100
+    value:
+      type: string
+      description: The value of the filter that was applied.
+      maxLength: 255
+  required:
+    - filter_type
+    - value
+  additionalProperties: false

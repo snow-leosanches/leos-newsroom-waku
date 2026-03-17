@@ -1,0 +1,64 @@
+apiVersion: v1
+resourceType: data-product
+resourceName: da9b5d6c-d1e4-48cc-8cae-d5ba7b0e9848
+data:
+    name: Leo's Newsroom Tracking Plan
+    sourceApplications:
+        - $ref: ./source-apps/leo's-newsroom-web-app.yaml
+    eventSpecifications:
+        - resourceName: 9df3aac2-b68a-460d-9df5-c2bfa100d9e0
+          name: User Signed In
+          event:
+              source: iglu:com.leos-newsroom/user_signed_in/jsonschema/1-0-0
+          entities:
+              tracked: []
+              enriched: []
+        - resourceName: 8db8cdcb-9bf3-4d58-8d51-69710f4ee7d7
+          name: Press Release Open
+          event:
+              source: iglu:com.leos-newsroom/press_release_open/jsonschema/1-0-0
+          entities:
+              tracked: []
+              enriched: []
+        - resourceName: e0b230c0-34ea-42e3-93b4-8573a3e4e661
+          name: Filter Applied
+          event:
+              source: iglu:com.leos-newsroom/filter_applied/jsonschema/1-0-0
+          entities:
+              tracked: []
+              enriched: []
+        - resourceName: e3a86a89-1623-489f-b825-5ae66cad9c66
+          name: Topic Selected
+          event:
+              source: iglu:com.leos-newsroom/topic_selected/jsonschema/1-0-0
+          entities:
+              tracked: []
+              enriched: []
+        - resourceName: f31f684b-8c4a-47ff-bfe1-54b1a7073260
+          name: Mention Clicked
+          event:
+              source: iglu:com.leos-newsroom/mention_clicked/jsonschema/1-0-0
+          entities:
+              tracked: []
+              enriched: []
+        - resourceName: 00ef69b1-c13f-4e77-b30f-dcbdf9800a65
+          name: Contact Viewed
+          event:
+              source: iglu:com.leos-newsroom/contact_viewed/jsonschema/1-0-0
+          entities:
+              tracked: []
+              enriched: []
+        - resourceName: 958b9c94-2bbb-4bbd-b75b-0a8d974b87ce
+          name: Contact Info Requested
+          event:
+              source: iglu:com.leos-newsroom/contact_info_requested/jsonschema/1-0-0
+          entities:
+              tracked: []
+              enriched: []
+        - resourceName: 35eb08aa-8c5f-4ed2-975a-230ff1256301
+          name: Directory Searched
+          event:
+              source: iglu:com.leos-newsroom/directory_searched/jsonschema/1-0-0
+          entities:
+              tracked: []
+              enriched: []
