@@ -6,9 +6,7 @@ import { PerformanceTimingPlugin } from '@snowplow/browser-plugin-performance-ti
 
 let initialized = false;
 
-// Collector endpoint — point to Snowplow Micro locally (localhost:9090)
-// or swap for your production collector URL.
-const COLLECTOR = 'localhost:9090';
+const COLLECTOR = import.meta.env.WAKU_PUBLIC_SNOWPLOW_COLLECTOR ?? 'localhost:9090';
 
 export function SnowplowInit() {
   useEffect(() => {
